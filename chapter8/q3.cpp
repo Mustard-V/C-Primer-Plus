@@ -1,5 +1,5 @@
 #include<iostream>
-#include<cstring>
+#include<string>
 #include<cctype>
 
 using namespace std;
@@ -9,7 +9,17 @@ int main() {
     string name;
     cout<<"Please Enter a string(q to quit): ";
     getline(cin,name);
-    while(name[0])
-    
+    while(name != "q") {
+        Toupper(name);
+        cout<<"Please Enter a string(q to quit): ";
+        getline(cin,name);       
+    }
+    cout<<"Bye"<<endl;
 }
 
+bool Toupper(string &name) {
+    for(auto &b: name){
+        b = toupper(b);
+    }
+    cout<<name<< endl;
+}
