@@ -15,7 +15,7 @@ bool set(stringgy &, char *);
 
 int main() {
     stringgy beany;
-    char testing[] = "Reality isn't waht it used to be.";
+    char testing[] = "Reality isn't what it used to be.";
 
     set(beany, testing);
 
