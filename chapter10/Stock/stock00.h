@@ -3,11 +3,11 @@
 #define _STOCK_
 
 #include <string>
-class stock
+class Stock
 {
 private:
     /* data */
-    std::string compay;
+    std::string company;
     long shares;
     double share_val;
     double total_val;
