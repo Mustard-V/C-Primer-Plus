@@ -13,7 +13,7 @@ public:
     ~Accout();
     void Making_Deposit(const double &);
     void WithDrawing(const double &);
-    void Show() const;
+    void Show() const;  
 };
 
 #endif
