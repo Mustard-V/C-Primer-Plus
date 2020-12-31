@@ -31,7 +31,7 @@ namespace VECTOR
 
     void vector::set_ang()
     {
-        if(x == 0.0, y == 0.0) ang = 0.0;
+        if(x == 0.0 && y == 0.0) ang = 0.0;
         else ang = atan2(y,x);
     }
     //public functions

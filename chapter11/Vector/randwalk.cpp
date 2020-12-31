@@ -2,6 +2,7 @@
 #include <cstdlib> // for rand(), srand()
 #include <ctime>
 #include "vector.hpp"
+
 int main() {
     using namespace std;
     using VECTOR::vector;
@@ -14,6 +15,7 @@ int main() {
     double dstep;
     cout<<result<<endl;
     cout<<"Enter target distance (alpha to quit):";
+
     while(cin>>target)
     {   
         cout<<"Enter distance of each step:";
@@ -26,14 +28,13 @@ int main() {
             result += step;
             steps++;
         }
-
-        cout << "After "<<steps<<" steps, the object has the follow location：";;
-        cout << result<<endl;
+     
+        cout << "After "<< steps <<" steps the object has the follow location:";
+        cout << result << endl;
         result.polar_mode();
-        cout<<" or \n"<<result<< endl;
-        cout<<"Average distance per step = "<<result.magval()/steps<<endl;
+        cout<<" or"<<endl<<result<< endl;
+        cout<<"Average distance per step = "<<result.magval()/steps<<steps<<endl;
 
-        //reset whole loop
         steps = 0;
         result.reset(0.0, 0.0);
         cout<<"Enter target distance (alpha to quit):";
