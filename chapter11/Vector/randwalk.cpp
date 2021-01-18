@@ -20,7 +20,7 @@ int main() {
     {   
         cout<<"Enter distance of each step:";
         if(!(cin>>dstep)) break;
-
+        
         while(result.magval() < target)
         {
             direction = rand()%360;

@@ -31,6 +31,7 @@ namespace VECTOR
 
     void vector::set_ang()
     {
+        
         if(x == 0.0 && y == 0.0) ang = 0.0;
         else ang = atan2(y,x);
     }
@@ -54,6 +55,7 @@ namespace VECTOR
         {
             x = n1;
             y = n2;
+            mode = RECT;
             set_mag();
             set_ang();
         }
@@ -61,14 +63,20 @@ namespace VECTOR
         {
             mag = n1;
             ang = n2/Rad_to_deg;
+            mode = POL;
             set_x();
             set_y();
 
         }
         else
         {
-            cout<< "incorrect 3 rd arguement .set to iniital value"<<std::endl;
-            vector();
+            cout<< "incorrect 3 rd argument .set to initial value"<<std::endl;
+            //vector();
+            x = n1;
+            y = n2;
+            mode = RECT;
+            set_mag();
+            set_ang();
         }
         
     }
@@ -92,8 +100,9 @@ namespace VECTOR
         }
         else
         {
-            cout<< "incorrect 3 rd arguement .set to iniital value"<<std::endl;
-            vector();
+            cout<< "incorrect 3 rd argument .set to initial value"<<std::endl;
+            //vector();
+
         }
         
     }
